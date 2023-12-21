@@ -21,7 +21,11 @@ If you want to know more about this dataset, you can study [this link](https://g
 ______
 ### Model
 
-[TO DESCRIBE]
+I decided to use CLIP model created by Open AI for Text-to-Image search. It's a famous multimodal model (because here we are dealing with text & image modalities) based on contrastive learning. Its architecture is depicted below ([src](https://github.com/openai/CLIP)):
+
+![CLIP scheme](https://github.com/openai/CLIP/raw/main/CLIP.png)
+
+In my project I use [this version of CLIP](https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1). Its advantages are 1) it's multi-lingual (supports 50+ languages including English, Russian, German, Chinese, Spanish); 2) it's distilled => smaller size but comparable to the original model.
 
 ______
 ### How to Deploy & Host
