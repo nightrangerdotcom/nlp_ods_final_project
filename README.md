@@ -10,6 +10,12 @@ Course: [link](https://ods.ai/tracks/nlp-course-autumn-23)
 Lecturer: Valentin Malykh
 
 ______
+### Data
+
+Let's talk about [dataset with images](https://unsplash.com/data) used in this project. There are Lite&Full versions of this dataset. Here I use the first one because it's smaller. 
+If you want to know more about this dataset, you can study [this link](https://github.com/unsplash/datasets). In short, Lite version contains ~25,000 animals/nature-themed images **(take it into account during the search process!)** that is around ~1.9GB according to my laptop stats.
+
+______
 ### How to Deploy & Host
 
 To deploy & host a model, I use Streamlit + Yandex Cloud. You also need Docker if you want to run & host it locally.
