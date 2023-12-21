@@ -1,6 +1,11 @@
 # NLP ODS Course 2023: Final Project
 ## Text to Image Search using CLIP model
 
+______
+### General
+Author: Victoria Frolova
+Course: [link](https://ods.ai/tracks/nlp-course-autumn-23)
+Lecturer: Valentin Malykh
 
 ______
 ### How to Deploy & Host
@@ -25,7 +30,7 @@ docker run -it -d --rm -p 8501:8501 --platform linux/amd64 t2i_streamlit:v1
 # if it's up, then you need to paste 'localhost:8501' in your browser & enjoy the results.
 ```
 
-3) ... but I decided to host my solution using Yandex Cloud's virtual machine, so you can skip steps 1-2 & just follow [this link](http://84.201.128.137:8501).
+3) ... but I decided to host my solution using Yandex Cloud's virtual machine, so you can skip steps 1-2 & just follow [this link](http://84.201.128.137:8501) (if it doesn't work, then it means right now I don't host my solution – I need to pay for this:) ).
 
 Important notes: 
 
