@@ -12,7 +12,7 @@ Lecturer: Valentin Malykh
 ______
 ### How to Deploy & Host
 
-To deploy & host a model, I use Streamlit + Yandex Cloud. You may also need Docker if you want to host it locally.
+To deploy & host a model, I use Streamlit + Yandex Cloud. You also need Docker if you want to run & host it locally.
 Short flow description with relevant commands: 
 
 1) Create docker image using Dockerfile specified in this repository: 
