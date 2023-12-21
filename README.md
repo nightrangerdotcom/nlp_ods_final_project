@@ -2,9 +2,10 @@
 ## Text to Image Search using CLIP model
 
 
+______
 ### How to Deploy & Host
 
-To deploy & host a model, I use Streamlit + Yandex Cloud. 
+To deploy & host a model, I use Streamlit + Yandex Cloud. You may also need Docker if you want to host it locally.
 Short flow description with relevant commands: 
 
 1) Create docker image using Dockerfile specified in this repository: 
@@ -21,9 +22,15 @@ docker build . -t t2i_streamlit:v1
 
 docker run -it -d --rm -p 8501:8501 --platform linux/amd64 t2i_streamlit:v1
 
-# if it's up, then you need to paste 'localhost:8501' in your browser.
+# if it's up, then you need to paste 'localhost:8501' in your browser & enjoy the results.
 ```
 
-3) ... but I decided to host my solution using Yandex Cloud's vurtual machine, so you can just follow [this link](http://84.201.128.137:8501).
+3) ... but I decided to host my solution using Yandex Cloud's virtual machine, so you can skip steps 1-2 & just follow [this link](http://84.201.128.137:8501).
 
-Important note:
+Important notes: 
+
+1) If you want to run container locally, first ask yourself what the architecture of your machine is. Maybe, you'll need to change the platform specified in Dockerfile & docker run command to avoid problems.   
+
+2) As I build a search system, there must be a folder with images. Actually, the images are downloaded every time you run a new container & then their embeddings are being created. => Please, keep in mind, that it takes some time to build a container & prepare the web interface in your browser. 
+
+______
