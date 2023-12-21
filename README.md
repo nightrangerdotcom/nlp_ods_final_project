@@ -16,6 +16,8 @@ Let's talk about [dataset with images](https://unsplash.com/data) used in this p
 
 If you want to know more about this dataset, you can study [this link](https://github.com/unsplash/datasets). In short, Lite version contains ~25,000 animals/nature-themed images **(take it into account during the search process!)** that is around ~1.9GB according to my laptop stats.
 
+[In process] Now I'm working on integration of another dataset which is called Fashion Product Images (Small). It contains ~44.000 clothes-themed images that is around ~570MB according to my laptop stats (=> lower-quality & smaller images than in the previously described dataset). Practically, this dataset seems to be more useful in terms of developing the search system because of two reasons. 1) Such systems are widely used in different retail companies (Ozon, Amazon, Lamoda, Wildberries etc); 2) Actually, in real life we often deal with small/low-quality pictures, so it's important to have a search system being able to work with such restrictions.
+
 ______
 ### How to Deploy & Host
 
