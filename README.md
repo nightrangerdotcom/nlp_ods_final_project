@@ -19,6 +19,11 @@ If you want to know more about this dataset, you can study [this link](https://g
 [In process] Now I'm working on integration of another dataset which is called Fashion Product Images (Small). It contains ~44.000 clothes-themed images that is around ~570MB according to my laptop stats (=> lower-quality & smaller images than in the previously described dataset). Practically, this dataset seems to be more useful in terms of developing the search system because of two reasons. 1) Such systems are widely used in different retail companies (Ozon, Amazon, Lamoda, Wildberries etc); 2) Actually, in real life we often deal with small/low-quality pictures, so it's important to have a search system being able to work with such restrictions.
 
 ______
+### Model
+
+[TO DESCRIBE]
+
+______
 ### How to Deploy & Host
 
 To deploy & host a model, I use Streamlit + Yandex Cloud. You also need Docker if you want to run & host it locally.
@@ -48,5 +53,7 @@ Important notes:
 1) If you want to run container locally, first ask yourself what the architecture of your machine is. Maybe, you'll need to change the platform specified in Dockerfile & docker run command to avoid problems.   
 
 2) As I build a search system, there must be a folder with images. Actually, the images are downloaded every time you run a new container & then their embeddings are being created. => Please, keep in mind, that it takes some time to build a container & prepare the web interface in your browser. 
+
+3) As fas as my code is integrated with streamlit framework, all the code pipeline is presented in Dockerfile (which files to run & in what order)
 
 ______
