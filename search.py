@@ -1,5 +1,6 @@
 """
 reference: 
+https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1
 https://github.com/UKPLab/sentence-transformers/blob/master/examples/applications/image-search/Image_Search-multilingual.ipynb 
 """
 
