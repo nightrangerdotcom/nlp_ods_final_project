@@ -4,7 +4,9 @@
 ______
 ### General
 Author: Victoria Frolova
+
 Course: [link](https://ods.ai/tracks/nlp-course-autumn-23)
+
 Lecturer: Valentin Malykh
 
 ______
