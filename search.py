@@ -24,7 +24,7 @@ def general(use_precomputed_embeddings: bool = True):
     if use_precomputed_embeddings:
         emb_filename = 'unsplash-25k-photos-embeddings.pkl'
         if not os.path.exists(emb_filename):   # Download dataset if does not exist
-            util.http_get('http://sbert.net/datasets/'+emb_filename, emb_filename)
+            util.http_get('http://sbert.net/datasets/' + emb_filename, emb_filename)
 
         with open(emb_filename, 'rb') as fIn:
             img_names, img_emb = pickle.load(fIn)
@@ -36,8 +36,18 @@ def general(use_precomputed_embeddings: bool = True):
 
         img_names = list(glob.glob('unsplash/photos/*.jpg'))
         print("Images:", len(img_names))
+
+        imgs = []
+        for file in img_names:
+            # to avoid this err:
+            # https://stackoverflow.com/questions/29234413/too-many-open-files-error-when-opening-and-loading-images-in-pillow
+            temp = Image.open(file)
+            keep = temp.copy()
+            imgs.append(keep)
+            temp.close()
+                    
         img_emb = img_model.encode(
-            [Image.open(filepath) for filepath in img_names], 
+            imgs, 
             batch_size=128, 
             convert_to_tensor=True, 
             show_progress_bar=True,
@@ -46,11 +56,11 @@ def general(use_precomputed_embeddings: bool = True):
     return model, img_names, img_emb 
 
 
-def search(query, k: int = 1, img_folder: str = 'photos/'):
+def search(query, k: int = 1, use_precomputed_embeddings: bool = True, img_folder: str = 'photos/'):
     """
     search function
     """
-    model, img_names, img_emb = general()
+    model, img_names, img_emb = general(use_precomputed_embeddings)
 
     # First, we encode the query (which can either be an image or a text string)
     query_emb = model.encode([query], convert_to_tensor=True, show_progress_bar=False)
