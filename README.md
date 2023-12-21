@@ -25,7 +25,7 @@ I decided to use CLIP model created by Open AI for Text-to-Image search. It's a 
 
 ![CLIP scheme](https://github.com/openai/CLIP/raw/main/CLIP.png)
 
-In my project I use [this version of CLIP](https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1). Its advantages are 1) it's multi-lingual (supports 50+ languages including English, Russian, German, Chinese, Spanish); 2) it's distilled => smaller size but comparable to the original model.
+In my project I use [this version of CLIP](https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1). Its advantages are 1) it's multi-lingual (supports 50+ languages including English, Russian, German, Chinese, Spanish); 2) it's distilled => smaller size but high quality comparable to the original model.
 
 ______
 ### How to Deploy & Host
@@ -58,6 +58,6 @@ Important notes:
 
 2) As I build a search system, there must be a folder with images. Actually, the images are downloaded every time you run a new container & then their embeddings are being created. => Please, keep in mind, that it takes some time to build a container & prepare the web interface in your browser. 
 
-3) As fas as my code is integrated with streamlit framework, all the code pipeline is presented in Dockerfile (which files to run & in what order)
+3) As fas as my code is integrated with streamlit framework, all the code pipeline is presented in Dockerfile (which files to run & in what order).
 
 ______
