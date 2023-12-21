@@ -10,6 +10,24 @@ Course: [link](https://ods.ai/tracks/nlp-course-autumn-23)
 Lecturer: Valentin Malykh
 
 ______
+### Goal
+
+**What?**
+
+1) To build text2image search system;
+2) To deploy & host it.
+
+**Why?**
+
+1) Search systems are widely used in many retail companies. Adding image modality to a classical search system could improve product metrics;
+
+2) My personal interests such as: 
+
+2.1) To know how ML/DL solutions can be integrated using different instruments (VM, Docker, Streamlit);
+
+2.2) To know more about image retrieval systems & multimodal models such as CLIP because it's really a well-known model.
+
+______
 ### Data
 
 Let's talk about [dataset with images](https://unsplash.com/data) used in this project. It's called The Unsplash Dataset. There are Lite&Full versions of this dataset. Here I use the first one because it's smaller. 
